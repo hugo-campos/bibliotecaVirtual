@@ -42,19 +42,19 @@ No endereço [https://flutter.io/setup-linux/](https://flutter.io/setup-linux/) 
 
 Acesse o endereço https://flutter.io/sdk-archive/#linux, baixe o arquivo no diretório informado abaixo e depois descompacte-o.
 
-    mv ~/Downloads/flutter_linux_v0.7.0-dev.tar.xz ~/desenv/sdk/flutter/
-    cd ~/desenv/sdk/flutter/
-    tar -xvf flutter_linux_v0.7.0-dev.tar.xz
-    mv flutter v0.7.0
+    $ mv ~/Downloads/flutter_linux_v0.7.0-dev.tar.xz ~/desenv/sdk/flutter/
+    $ cd ~/desenv/sdk/flutter/
+    $ tar -xvf flutter_linux_v0.7.0-dev.tar.xz
+    $ mv flutter v0.7.0
     
 Obs: Certifique-se que o diretório do java ficou assim ~/desenv/sdk/flutter/v0.7.0
 
 E no final do arquivo ~/.bash_profile ou ~/.profile (vai depender de sua distro linux), coloque os trechos abaixo: (após edição do arquivo refazer login no linux)
 
-  FLUTTER_HOME=/home/hendi/desenv/sdk/flutter/v0.7.0
-  export FLUTTER_HOME
+    FLUTTER_HOME=/home/hendi/desenv/sdk/flutter/v0.7.0
+    export FLUTTER_HOME
 
-  PATH=$FLUTTER_HOME/bin:$PATH
+    PATH=$FLUTTER_HOME/bin:$PATH
 
 ### Dependencias para o funcionamento do Flutter
 
@@ -64,7 +64,7 @@ E basicamente você só precisa criar seu app utilizando apenas uma única lingu
 
 Então ele vai precisar de algumas dependências para que funcione, e inclusive ele oferece um utilitário para você verificar o que está faltando do seu sistema operacional pra você começar a codificar. Rode o comando abaixo n seu terminal...
 
-  flutter doctor -v
+    $ flutter doctor -v
 
 No meu caso a saída do comando foi essa aqui:
 
