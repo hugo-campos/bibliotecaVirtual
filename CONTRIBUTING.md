@@ -60,7 +60,7 @@ E no final do arquivo ~/.bash_profile ou ~/.profile (vai depender de sua distro 
 
 Provavelmente você deve ter entrado no site do flutter e visto que ele é uma SDK (Software Development Kit), ou seja um conjunto de blibliotecas e ferramentas pra você criar aplicações nativas para Andriod e IOS. 
 
-E basicamente você só precisa criar seu app utilizando apenas uma única linguagem de programação e que converte tudo praticamente tudo em código nativo da plataforma em que você fizer o build.
+E basicamente você só precisa criar seu app utilizando apenas uma única linguagem de programação, que no final ele converte praticamente tudo em código nativo da plataforma em que você fizer o build.
 
 Então ele vai precisar de algumas dependências para que funcione, e inclusive ele oferece um utilitário para você verificar o que está faltando do seu sistema operacional pra você começar a codificar. Rode o comando abaixo n seu terminal...
 
