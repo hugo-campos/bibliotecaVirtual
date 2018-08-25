@@ -189,7 +189,7 @@ Opa!!! Menos um erro no flutter doctor -v
 
     ! Doctor found issues in 4 categories.
 
-Logo mais vou esplicar como resolver cada pendências dessas.
+Logo mais vou explicar como resolver cada pendências dessas.
 
 Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
 
