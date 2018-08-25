@@ -283,18 +283,18 @@ Olha que lindo!!! Zero erros!!!
 **OBS**: Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
 
 
-### Criando uma App Flutter pra validar nossa instalação
+# Criando uma App Flutter pra validar nossa instalação
 
 Você pode usar seu editor preferido pra criar a aplicação... Provavelmente, daqui pra frente usarei o VisualCode, mas pra validar nossa instalação vou fazer a aplicação de teste usando o Android Studio.
 
-#### Instalando o plugin Flutter e Dart no Android Studio
+## Instalando o plugin Flutter e Dart no Android Studio
 
     Vá no item de menu File > Settings > Plugins.
     Click em Browse repositories…, selecione o plugin Flutter e Flutter i18n e click em install.
     Também procure o plugin Dart e instale-o.
     Depois reinicie o Android Studio.
 
-#### New project Flutter
+## New project Flutter
 
 Chagamos no ponto de criar nosso primeiro App Flutter!!!!
 
@@ -312,6 +312,25 @@ Acesse o menu File > New > New Flutter Project > Flutter Application e Next
     Vair demorar um pouco a primeira vez, pois vai baixar umas dependências.
 
 Pronto, nosso Hello World saiu!!!
+
+## Criando nosso primeiro .apk android
+
+Olha que simple, na pasta do projeo basta executar o comando 'flutter build apk'
+
+    ➜  flutter build apk                                
+    Initializing gradle...                                       0,4s
+    Resolving dependencies...                                    0,5s
+    Running 'gradlew assembleRelease'...                         8,4s
+    Built build/app/outputs/apk/release/app-release.apk (5.3MB).
+
+
+## Criando nosso primeiro build IOS
+
+Buaaaa... :(
+
+    ➜  flutter_app flutter build ios 
+    Building for iOS is only supported on the Mac.
+
 
 --------------------------------------------------
 
