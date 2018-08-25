@@ -227,4 +227,34 @@ Logo mais vou explicar como resolver cada pendências dessas.
 Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
 
 
+### Criando uma App Flutter pra validar nossa instalação
+
+Você pode usar seu editor preferido pra criar a aplicação... Provavelmente, daqui pra frente usarei o VisualCode, mas pra validar nossa instalação vou fazer a aplicação de teste usando o Android Studio.
+
+#### Instalando o plugin Flutter e Dart no Android Studio
+
+    Vá no item de menu File > Settings > Plugins.
+    Click em Browse repositories…, selecione o plugin Flutter e Flutter i18n e click em install.
+    Também procure o plugin Dart e instale-o.
+    Depois reinicie o Android Studio.
+
+#### New project Flutter
+
+Chagamos no ponto de criar nosso primeiro App Flutter!!!!
+
+Acesse o menu File > New > New Flutter Project > Flutter Application e Next
+
+    Project name: flutter_app
+    Flutter SDK Path: ~/desenv/sdk/flutter/v0.7.0
+    Project Location: ~/desenv/projetos/biblioteca-virtual
+    Description: A new Flutter application.
+    Next
+    Company domain: example.com
+    Finish
+    Logo em seguida, pede para abrir o projeto na mesma janela ou em outra, selecionei mesma janela.
+
+
+
+
+
 Volto já...
