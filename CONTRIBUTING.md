@@ -192,6 +192,34 @@ E para saber se você pode executar seu emulador com uma perfomance melhor, clic
 
 Se seu emulardor iniciar normalmente, sucesso! Você já está com uma boa performance no seu emulador.. e deve estar iniciando bem rápido. Caso contrário, será necessário configurar algumas coisas no seu SO para poder habilitar essa função! Siga esses links para tentar identificar [link1](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) e [link2](https://www.google.com.br/search?q=android+studio+emulator+performance&oq=emulate+android+performan&aqs=chrome.1.69i57j0l2.7512j0j7&sourceid=chrome&ie=UTF-8) .
 
+#### 2 - Android Toolchain
+
+Eu comecei pela instalação do Android Studio porque eu já sabia que ia precisar instalar o Android SDK e que esse passo ia ser fácil de configurar em seguida.
+
+Se observaram a mensagem de erro do flutter doctor, ele diz justamente que não achou a variárial de ambiente chamada ANDROID_HOME. Para configurar, segue:
+
+E no final do arquivo ~/.bash_profile ou ~/.profile (vai depender de sua distro linux), coloque os trechos abaixo: (após edição do arquivo refazer login no linux)
+
+    ANDROID_HOME=~/desenv/sdk/android
+    export ANDROID_HOME
+
+Depois de fazer logout do Linux, rode o **flutter doctor -v** novamente.
+
+Agora ele só pede pra rodar um comamndo pra aceitar as licenças do android.
+
+    [!] Android toolchain - develop for Android devices (Android SDK 28.0.2)
+        • Android SDK at /home/hendi/desenv/sdk/android
+        • Android NDK location not configured (optional; useful for native profiling support)
+        • Platform android-28, build-tools 28.0.2
+        • ANDROID_HOME = /home/hendi/desenv/sdk/android
+        • Java binary at: /home/hendi/desenv/ide/android-studio/android-studio-ide-173.4907809-linux/jre/bin/java
+        • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+        ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+Execute no terminal então o comando solicitado e (y) pra tudo.
+
+    flutter doctor --android-licenses
+
 
 
 Logo mais vou explicar como resolver cada pendências dessas.
