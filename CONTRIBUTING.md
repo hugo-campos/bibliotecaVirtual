@@ -30,7 +30,8 @@ Para facilitar o desenvolvimento, vou sugerir criar alguns diretórios para melh
     $ mkdir -p ~/desenv/sdk/flutter; # Local de descompactação do Flutter v0.7.0
     $ mkdir -p ~/desenv/sdk/android; # Local de descompactação do Android SDK
     $ mkdir -p ~/desenv/sdk/jdk; # Local de descompactação do JDK 1.8
-    $ mkdir -p ~/desenv/projects/biblioteca-virtual; # Workspace do eclipse
+    $ mkdir -p ~/desenv/projects/biblioteca-virtual/android; # Workspace do Android Studio (validação da instalação do Android Studio)
+    $ mkdir -p ~/desenv/projects/biblioteca-virtual/flutter; # Local do nosso projeto
 
 ## Instalação do SDK do Java
 
@@ -152,11 +153,36 @@ Meus passos foram:
 - Custom
 - Theme: Darcula (minha prferência)
 - Marquei os componentes Android SDK, Android SDK Platform, API 28 e Android Virtual Device e por fim coloquei o diretório customizado para instalação do Android SDK em _**~/desenv/sdk/android**_.
- - Next 2x
- - Antes de finalizar ele informa que detectou que meu SO pode rodar o emulador em modo de performance acelerada e que meu linux tem suporte aceleração de maquina virtual sobre o KVM, e que mais questões sobre performance ou posso consultar a página do [link](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux).
- - Finish... wait... wait... wait... coffee.. wait... wait... coffee.. 
+- Next 2x
+- Antes de finalizar ele informa que detectou que meu SO pode rodar o emulador em modo de performance acelerada e que meu linux tem suporte aceleração de maquina virtual sobre o KVM, e que mais questões sobre performance ou posso consultar a página do [link](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux).
+- Finish... wait... wait... wait... coffee.. wait... wait... coffee.. 
 
+Após a instalação, fui testar meu ambiente Android criando uma aplicação de exemplo.
+Siga-me os bons... já dizia Chapolin Colorado
 
+- Start a new Android Studio project
+- Application Name: "My Application", Company domain: "foo.example.com", Project location: "~/desenv/projects/biblioteca-virtual/android/MyApplication" e Next
+- Check apenas "Phone and tablet" e selecione a API 23 (Android 6.0) - (Lembre-se que só estou validando a instalação, não tenho pretenções neste momento de fazer a aplicação funcionar em vários dispositivos) e Next
+- Template: Navigaion Drawer Activity e Next
+- Activity Name: "MainActivity", Layout Name: "activity_main", Title: "MainActivity" e Next e Finish
+
+Após a criação do projeto, e ao iniciar o Android Studio receberá o seguinte erro:
+
+_**Failed to find Build Tools revision 27.0.3
+Install Build Tools 27.0.3 and sync project**_
+
+Click sobre esse link de instalação do Build Tools e siga os passo do wizard.
+
+- Aceite a licença, Next e Finish
+- Aguarde um pouco enquanto o Gradle baixa uns componentes do repositório e o Android Studio fazer build do seu projeto.
+- Feche o arquivo content_main.xml e reabra logo em seguida. Verá que o Android Studio vai renderizar sua seu app inicial.
+
+Agora vamos tentar executar nosso App.
+
+- Click em "Run App" (no canto superior direito)
+- O android pedirá pra selecionar o dispositivo, no meu caso vou usar o emulador, pois não tenho celular conectado no USB.
+- No meu caso já veio um Virtual Device chamado "Nexus 5X API 28 x86", selecione e click em Ok
+- E foi!!! O emulador iniciou e apresentou o App.
 
 Logo mais vou esplicar como resolver cada pendências dessas.
 
