@@ -188,6 +188,12 @@ Opa!!! Menos um erro no flutter doctor -v
 
     ! Doctor found issues in 4 categories.
 
+E para saber se você pode executar seu emulador com uma perfomance melhor, click sobre o icone "AVD Manager" no canto superior direito de seu Visual Studio e edite as configurações do emulador que já veio instalado para usar o modo "Hardware - GLES 2.0" na opção Emulated Performance Graphics.
+
+Se seu emulardor iniciar normalmente, sucesso! Você já está com uma boa performance no seu emulador.. e deve estar iniciando bem rápido. Caso contrário, será necessário configurar algumas coisas no seu SO para poder habilitar essa função! Siga esses links para tentar identificar [link1](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux) e [link2](https://www.google.com.br/search?q=android+studio+emulator+performance&oq=emulate+android+performan&aqs=chrome.1.69i57j0l2.7512j0j7&sourceid=chrome&ie=UTF-8) .
+
+
+
 Logo mais vou explicar como resolver cada pendências dessas.
 
 Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
