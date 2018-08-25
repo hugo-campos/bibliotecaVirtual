@@ -168,9 +168,8 @@ Siga-me os bons... já dizia Chapolin Colorado
 
 Após a criação do projeto, e ao iniciar o Android Studio receberá o seguinte erro:
 
-_**Failed to find Build Tools revision 27.0.3**_
-
-_**Install Build Tools 27.0.3 and sync project**_
+    _**Failed to find Build Tools revision 27.0.3**_
+    _**Install Build Tools 27.0.3 and sync project**_
 
 Click sobre esse link de instalação do Build Tools e siga os passo do wizard.
 
