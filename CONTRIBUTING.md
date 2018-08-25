@@ -221,9 +221,66 @@ Execute no terminal então o comando solicitado e (y) pra tudo.
     flutter doctor --android-licenses
 
 
-Logo mais vou explicar como resolver cada pendências dessas.
+#### 3 - Flutter (Channel dev, v0.7.0, on Linux, locale pt_BR.UTF-8)
 
-Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
+    ✗ Downloaded executables cannot execute on host
+
+Esse erro ocorre porque minha máquina é 64bits e não consigo gerar .apk para celulares 32bits (modo padrão de gerar apk pelo comando flluter build).
+
+E no próprio log de erro e já informa que eu devo instalar uma lib no meu SO para dar compatibilidade com 32bits. E como meu SO é o Fedora, vou executar o comando 'sudo dnf install libstdc++.i686' no terminal
+
+    sudo dnf install libstdc++.i686
+    
+#### 4 - VS Code (version 1.26.1)
+
+    Flutter extension not installed; install from
+
+Esse warning ele só exibiu porque detectou que eu tenho o VSCode instalado na minha máquina. E para quem pretende usar o VSCode para desenvolver, ele pede pra instalar um plugin.
+
+Basta rodar o comando abaixo no terminal.
+
+    ➜  ~ code --install-extension Dart-Code.flutter
+    Found 'Dart-Code.flutter' in the marketplace.
+    Installing...
+    Extension 'Dart-Code.flutter' v2.17.1 was successfully installed!
+
+#### 5 - Consultando o doctor
+
+Olha que lindo!!! Zero erros!!!
+
+    ➜  ~ flutter doctor -v
+    [✓] Flutter (Channel dev, v0.7.0, on Linux, locale pt_BR.UTF-8)
+        • Flutter version 0.7.0 at /home/hendi/desenv/sdk/flutter/v0.7.0
+        • Framework revision 09fe34708f (2 days ago), 2018-08-22 10:20:51 -0700
+        • Engine revision 4b271b2e02
+        • Dart version 2.1.0-dev.1.0.flutter-69fce633b7
+
+    [✓] Android toolchain - develop for Android devices (Android SDK 28.0.2)
+        • Android SDK at /home/hendi/desenv/sdk/android
+        • Android NDK location not configured (optional; useful for native profiling support)
+        • Platform android-28, build-tools 28.0.2
+        • ANDROID_HOME = /home/hendi/desenv/sdk/android
+        • Java binary at: /home/hendi/desenv/ide/android-studio/android-studio-ide-173.4907809-linux/jre/bin/java
+        • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+        • All Android licenses accepted.
+
+    [✓] Android Studio (version 3.1)
+        • Android Studio at /home/hendi/desenv/ide/android-studio/android-studio-ide-173.4907809-linux
+        • Flutter plugin version 27.1.1
+        • Dart plugin version 173.4700
+        • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+    [✓] VS Code (version 1.26.1)
+        • VS Code at /usr/share/code
+        • Flutter extension version 2.17.1
+
+    [✓] Connected devices (1 available)
+        • Android SDK built for x86 • emulator-5556 • android-x86 • Android 9 (API 28) (emulator)
+
+    • No issues found!
+
+
+**OBS**: Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
 
 
 ### Criando uma App Flutter pra validar nossa instalação
