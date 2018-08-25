@@ -25,16 +25,38 @@ Este guia visa descrever todo o processo de criação do ambiente de desenvolvim
 
 Para facilitar o desenvolvimento, vou sugerir criar alguns diretórios para melhor organização do ambiente local de desenvolvimento. Vou usar essa convenção nos comandos abaixo, se não quiser seguir essa convenção faça adaptações nos comandos a serem executado.
 
-    $ mkdir -p ~/desenv/ide/vscode/eclipse-jee-photon; # Local de descompactação do Eclipse
-    $ mkdir -p ~/desenv/sdk/flutter; # Local de descompactação do JDK 1.8
+    $ mkdir -p ~/desenv/ide/android-studio; # Local de descompactação do Android Studio
+    $ mkdir -p ~/desenv/ide/vscode; # Local de descompactação do Visual Code
+    $ mkdir -p ~/desenv/sdk/flutter; # Local de descompactação do Flutter v0.7.0
+    $ mkdir -p ~/desenv/sdk/android; # Local de descompactação do Android SDK
+    $ mkdir -p ~/desenv/sdk/jdk; # Local de descompactação do JDK 1.8
     $ mkdir -p ~/desenv/projects/biblioteca-virtual; # Workspace do eclipse
-    $ mkdir -p ~/desenv/server/wildfly; # Local de descompactação do wildfly
-    $ mkdir -p ~/desenv/tools/maven; # Local de descompactação do maven
 
+## Instalação do SDK do Java
+
+Você vai precisar para o funcionamento do Android Studio e outras ferramentas!
+
+### Ambiente Linux
+
+Descompactar a versão 1.8.0_181 do java no diretório indicado abaixo: 
+
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+    cd ~/desenv/sdk/jdk/
+    unzip jdk1.8.0_181.zip
+    
+Obs: Certifique-se que o diretório do java ficou assim ~/desenv/sdk/jdk/jdk1.8.0_181
+
+E no final do arquivo ~/.bash_profile ou ~/.profile (vai depender de sua distro linux), colocar os trechos abaixo: (após edição do arquivo refazer login no linux)
+
+    JAVA_HOME=~/desenv/sdk/jdk/jdk1.8.0_181
+    export JAVA_HOME
+    
+    PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
 
 ## Instalação do SDK Flutter
 
-Iremos trabalhar com a versão DEV do Flutter, que está na versão v0.7.0.
+Para essa aplicação de apredizagem iremos trabalhar com a versão DEV do Flutter, que está na versão v0.7.0.
 
 ### Ambiente Linux
 
@@ -106,6 +128,35 @@ No meu caso a saída do comando foi essa aqui:
 ```
 
 Ou seja, foram encontrado problemas em 5 categorias.
+
+#### 1 - Andriod Studio
+
+Bom, vou começar pelo Android Studio! 
+
+Como solicitado pelo comando 'flutter doctor', vamos no [link](https://developer.android.com/studio/index.html) fazer o download do Android Studio para começar nossa instalação.
+
+Baixe a versão _**3.1.4 for Linux 64-bit (856 MB)**_ e comece a instalação conforme comandos abaixo.
+
+    cd ~/desenv/ide/android-studio
+    unzip ~/Downloads/android-studio-ide-173.4907809-linux.zip
+    mv android-studio android-studio-ide-173.4907809-linux; # Costumo fazer isso para ter o rastro da versão do binário que eu instalei
+    cd android-studio-ide-173.4907809-linux
+    ./bin/studio.sh
+    
+Ao executar este último comando, o Android irá iniciar um wizard de instalação.
+
+Meus passos foram:
+
+- Não importar nada de configurações e projetos outras versões priviamente instaladas.
+- Next
+- Custom
+- Theme: Darcula (minha prferência)
+- Marquei os componentes Android SDK, Android SDK Platform, API 28 e Android Virtual Device e por fim coloquei o diretório customizado para instalação do Android SDK em _**~/desenv/sdk/android**_.
+ - Next 2x
+ - Antes de finalizar ele informa que detectou que meu SO pode rodar o emulador em modo de performance acelerada e que meu linux tem suporte aceleração de maquina virtual sobre o KVM, e que mais questões sobre performance ou posso consultar a página do [link](https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux).
+ - Finish... wait... wait... wait... coffee.. wait... wait... coffee.. 
+
+
 
 Logo mais vou esplicar como resolver cada pendências dessas.
 
