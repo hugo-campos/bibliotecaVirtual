@@ -221,7 +221,6 @@ Execute no terminal então o comando solicitado e (y) pra tudo.
     flutter doctor --android-licenses
 
 
-
 Logo mais vou explicar como resolver cada pendências dessas.
 
 Se no seu ambiente você encontrou outros problemas, nos informe e mostre também como às resolver... Ah! Ajude a criar uma seção de intalaçao em Mac e Windows (Deus me livre! :P).
@@ -252,9 +251,15 @@ Acesse o menu File > New > New Flutter Project > Flutter Application e Next
     Company domain: example.com
     Finish
     Logo em seguida, pede para abrir o projeto na mesma janela ou em outra, selecionei mesma janela.
+    Selecione o device emulado no canto superor direito do Android Studio e dois em Run App.
+    Vair demorar um pouco a primeira vez, pois vai baixar umas dependências.
+
+Pronto, nosso Hello World saiu!!!
+
+--------------------------------------------------
+
+Se não funcionou pra você, conte-nos para que possamos te ajudar.
+
+E sinta-se a vontade para corrigir quaisquer passo deste guia!
 
 
-
-
-
-Volto já...
