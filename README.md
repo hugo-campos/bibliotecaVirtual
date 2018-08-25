@@ -13,4 +13,5 @@ Criar um um aplicativo mobile, onde os usúarios possam adicionar e gerenciar os
 * Cadastro poderá ser feito manualmente ou pelo código ISBN;
 * Rastreamento do livro (para qual pessoa o livro foi emprestado e quando foi emprestado);
 * O usuário poderá deixar o livro público, desta forma, qualquer outro usuário poderá ver;
-* Pontuação do livro(com estrelas);
+* O usuário poderá pontuar o livro, com um sistema de (Estrelas)
+
